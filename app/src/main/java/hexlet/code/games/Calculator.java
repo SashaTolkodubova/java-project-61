@@ -28,7 +28,7 @@ public class Calculator implements Games {
         int firstNumber = random.nextInt(0, 100);
         int secondNumber = random.nextInt(0, 100);
         int signIndex = random.nextInt(arithmeticSigns.length);
-        System.out.println("Question: " + firstNumber + arithmeticSigns[signIndex] + secondNumber);
+        System.out.println("Question: " + firstNumber + " " + arithmeticSigns[signIndex] + " " + secondNumber);
         System.out.println("Your answer: ");
         answer = scanner.next();
         if (arithmeticSigns[signIndex] == '-') {
