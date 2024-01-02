@@ -1,9 +1,8 @@
-package hexlet.code.games;
-
-import hexlet.code.Games;
+package hexlet.code;
 
 
-public class Engine {
+
+public final class Engine {
     public void play(Games game) {
         System.out.println(game.getInstruction());
         int rounds = 3;

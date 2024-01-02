@@ -11,6 +11,14 @@ import java.util.Scanner;
 
 public class Cli {
     void greeting() {
+        int answer0 = 0;
+        int answer1 = 1;
+        int answer2 = 2;
+        int answer3 = 3;
+        int answer4 = 4;
+        int answer5 = 5;
+        int answer6 = 6;
+
         Scanner scanner = new Scanner(System.in);
         Greeting greeting = new Greeting(scanner);
         System.out.println("Please enter the game number and press Enter.");
@@ -23,23 +31,25 @@ public class Cli {
                 + "0 - Exit");
         int choice = scanner.nextInt();
         System.out.println("Your choice: " + choice);
-        if (choice == 1) {
+        if (choice == answer1) {
             greeting.greeting();
-        } else if (choice == 2) {
+        } else if (choice == answer2) {
             EvenNumber evenNumber = new EvenNumber(greeting.greeting(), scanner);
             evenNumber.play();
-        } else if (choice == 3) {
+        } else if (choice == answer3) {
             Calculator calculator = new Calculator(greeting.greeting(), scanner);
             calculator.play();
-        } else if (choice == 4) {
+        } else if (choice == answer4) {
             GCD gcd = new GCD(greeting.greeting(), scanner);
             gcd.play();
-        } else if (choice == 5) {
+        } else if (choice == answer5) {
             Progression progression = new Progression(greeting.greeting(), scanner);
             progression.play();
-        } else if (choice == 6) {
+        } else if (choice == answer6) {
             Prime prime = new Prime(greeting.greeting(), scanner);
             prime.play();
+        } else if (choice == answer0) {
+            return;
         }
     }
 }

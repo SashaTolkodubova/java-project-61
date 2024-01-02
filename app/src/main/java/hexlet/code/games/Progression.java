@@ -1,19 +1,20 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Games;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Progression implements Games {
+public final class Progression implements Games {
     private final String name;
     private final Scanner scanner;
     private String answer;
     private String correctAnswer;
 
-    public Progression(String name, Scanner scanner) {
-        this.name = name;
-        this.scanner = scanner;
+    public Progression(String localname, Scanner localScanner) {
+        this.name = localname;
+        this.scanner = localScanner;
     }
 
     public void play() {
@@ -24,10 +25,13 @@ public class Progression implements Games {
     public boolean round() {
         Random random = new Random();
         StringBuilder stringBuilder = new StringBuilder();
-        int arrayLength = random.nextInt(5, 15);
-        int secretNumberPosition = random.nextInt(0, arrayLength);
-        int firstNumberInProgression = random.nextInt(0, 10);
-        int progressionsStep = random.nextInt(1, 10);
+        int minValueOfArrayLength = 5;
+        int maxValueOfArrayLength = 15;
+        int maxSizeOfProgression = 10;
+        int arrayLength = random.nextInt(minValueOfArrayLength, maxValueOfArrayLength);
+        int secretNumberPosition = random.nextInt(arrayLength);
+        int firstNumberInProgression = random.nextInt(maxSizeOfProgression);
+        int progressionsStep = random.nextInt(maxSizeOfProgression);
         String[] arrayStrings = new String[arrayLength];
         int[] array = new int[arrayLength];
 

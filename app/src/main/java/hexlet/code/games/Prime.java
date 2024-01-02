@@ -1,19 +1,20 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Games;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Prime implements Games {
+public final class Prime implements Games {
     private final String name;
     private final Scanner scanner;
     private String answer;
     private String correctAnswer;
 
-    public Prime(String name, Scanner scanner) {
-        this.name = name;
-        this.scanner = scanner;
+    public Prime(String localName, Scanner localScanner) {
+        this.name = localName;
+        this.scanner = localScanner;
     }
 
     public void play() {
@@ -23,7 +24,8 @@ public class Prime implements Games {
 
     public boolean round() {
         Random random = new Random();
-        int number = random.nextInt(100);
+        int maxValue = 100;
+        int number = random.nextInt(maxValue);
         if (isPrime(number)) {
             correctAnswer = "yes";
         } else {

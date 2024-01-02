@@ -1,20 +1,21 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Games;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Calculator implements Games {
+public final class Calculator implements Games {
     private final String name;
     private final Scanner scanner;
     private String answer;
     private String correctAnswer;
 
 
-    public Calculator(String name, Scanner scanner) {
-        this.name = name;
-        this.scanner = scanner;
+    public Calculator(String localName, Scanner localScanner) {
+        this.name = localName;
+        this.scanner = localScanner;
     }
 
     public void play() {
@@ -25,8 +26,9 @@ public class Calculator implements Games {
     public boolean round() {
         final char[] arithmeticSigns = {'-', '+', '*'};
         Random random = new Random();
-        int firstNumber = random.nextInt(0, 100);
-        int secondNumber = random.nextInt(0, 100);
+        int maxValue = 100;
+        int firstNumber = random.nextInt(maxValue);
+        int secondNumber = random.nextInt(maxValue);
         int signIndex = random.nextInt(arithmeticSigns.length);
         System.out.println("Question: " + firstNumber + " " + arithmeticSigns[signIndex] + " " + secondNumber);
         System.out.println("Your answer: ");

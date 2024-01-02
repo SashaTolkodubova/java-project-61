@@ -1,22 +1,23 @@
 package hexlet.code.games;
 
 
+import hexlet.code.Engine;
 import hexlet.code.Games;
 
 import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
-public class EvenNumber implements Games {
+public final class EvenNumber implements Games {
     private final String name;
     private final Scanner scanner;
     private String answer;
     private String correctAnswer;
 
 
-    public EvenNumber(String name, Scanner scanner) {
-        this.name = name;
-        this.scanner = scanner;
+    public EvenNumber(String locaLname, Scanner localScanner) {
+        this.name = locaLname;
+        this.scanner = localScanner;
     }
 
     public void play() {
@@ -26,7 +27,8 @@ public class EvenNumber implements Games {
 
     public boolean round() {
         Random random = new Random();
-        int number = random.nextInt(0, 100);
+        int maxValue = 100;
+        int number = random.nextInt(maxValue);
         System.out.println("Question: " + number);
         System.out.println("Your answer: ");
         answer = scanner.next();

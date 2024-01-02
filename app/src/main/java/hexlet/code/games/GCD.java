@@ -1,20 +1,21 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Games;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class GCD implements Games {
+public final class GCD implements Games {
 
     private final String name;
     private final Scanner scanner;
     private String answer;
     private String correctAnswer;
 
-    public GCD(String name, Scanner scanner) {
-        this.name = name;
-        this.scanner = scanner;
+    public GCD(String localName, Scanner localScanner) {
+        this.name = localName;
+        this.scanner = localScanner;
     }
 
     public void play() {
@@ -24,8 +25,10 @@ public class GCD implements Games {
 
     public boolean round() {
         Random random = new Random();
-        int firstNumber = random.nextInt(1, 100);
-        int secondNumber = random.nextInt(1, 100);
+        int minValue = 1;
+        int maxValue = 100;
+        int firstNumber = random.nextInt(minValue, maxValue);
+        int secondNumber = random.nextInt(minValue, maxValue);
         System.out.println("Question: " + firstNumber + " " + secondNumber);
         System.out.println("Your answer: ");
         answer = scanner.next();
