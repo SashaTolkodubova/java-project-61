@@ -5,7 +5,8 @@ package hexlet.code;
 public final class Engine {
     public void play(Games game) {
         System.out.println(game.getInstruction());
-        for (int i = 0; i < 3; i++) {
+        final int rounds = 3;
+        for (int i = 0; i < rounds; i++) {
             if (game.round()) {
                 System.out.println("Correct!");
             } else {
