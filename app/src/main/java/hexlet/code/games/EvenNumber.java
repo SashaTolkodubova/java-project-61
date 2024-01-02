@@ -27,7 +27,7 @@ public final class EvenNumber implements Games {
 
     public boolean round() {
         Random random = new Random();
-        int maxValue = 100;
+        final int maxValue = 100;
         int number = random.nextInt(maxValue);
         System.out.println("Question: " + number);
         System.out.println("Your answer: ");

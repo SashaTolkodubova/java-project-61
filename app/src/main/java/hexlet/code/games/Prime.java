@@ -24,7 +24,7 @@ public final class Prime implements Games {
 
     public boolean round() {
         Random random = new Random();
-        int maxValue = 100;
+        final int maxValue = 100;
         int number = random.nextInt(maxValue);
         if (isPrime(number)) {
             correctAnswer = "yes";

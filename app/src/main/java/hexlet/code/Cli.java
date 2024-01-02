@@ -9,15 +9,15 @@ import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
-public class Cli {
+public final class Cli {
     void greeting() {
-        int answer0 = 0;
-        int answer1 = 1;
-        int answer2 = 2;
-        int answer3 = 3;
-        int answer4 = 4;
-        int answer5 = 5;
-        int answer6 = 6;
+        final int answer0 = 0;
+        final int answer1 = 1;
+        final int answer2 = 2;
+        final int answer3 = 3;
+        final int answer4 = 4;
+        final int answer5 = 5;
+        final int answer6 = 6;
 
         Scanner scanner = new Scanner(System.in);
         Greeting greeting = new Greeting(scanner);

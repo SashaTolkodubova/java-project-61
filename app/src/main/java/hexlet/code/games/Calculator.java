@@ -26,7 +26,7 @@ public final class Calculator implements Games {
     public boolean round() {
         final char[] arithmeticSigns = {'-', '+', '*'};
         Random random = new Random();
-        int maxValue = 100;
+        final int maxValue = 100;
         int firstNumber = random.nextInt(maxValue);
         int secondNumber = random.nextInt(maxValue);
         int signIndex = random.nextInt(arithmeticSigns.length);

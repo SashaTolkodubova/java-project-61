@@ -25,8 +25,8 @@ public final class GCD implements Games {
 
     public boolean round() {
         Random random = new Random();
-        int minValue = 1;
-        int maxValue = 100;
+        final int minValue = 1;
+        final int maxValue = 100;
         int firstNumber = random.nextInt(minValue, maxValue);
         int secondNumber = random.nextInt(minValue, maxValue);
         System.out.println("Question: " + firstNumber + " " + secondNumber);

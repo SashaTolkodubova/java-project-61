@@ -25,9 +25,9 @@ public final class Progression implements Games {
     public boolean round() {
         Random random = new Random();
         StringBuilder stringBuilder = new StringBuilder();
-        int minValueOfArrayLength = 5;
-        int maxValueOfArrayLength = 15;
-        int maxSizeOfProgression = 10;
+        final int minValueOfArrayLength = 5;
+        final int maxValueOfArrayLength = 15;
+        final int maxSizeOfProgression = 10;
         int arrayLength = random.nextInt(minValueOfArrayLength, maxValueOfArrayLength);
         int secretNumberPosition = random.nextInt(arrayLength);
         int firstNumberInProgression = random.nextInt(maxSizeOfProgression);
